@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"

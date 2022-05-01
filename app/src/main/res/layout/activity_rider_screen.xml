@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="510dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,8 +17,8 @@
         app:srcCompat="@drawable/map_image" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="411dp"
-        android:layout_height="303dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,46 +32,46 @@
             android:id="@+id/txtPick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pickup Location"
-            android:textColor="@color/black"
             android:layout_marginTop="10dp"
-             />
+            android:text="Pickup Location"
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/currentLocation"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="10dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/custom_edittetext"
             android:hint="Current location.."
-            android:layout_marginTop="40dp"/>
+            android:padding="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
         <TextView
             android:id="@+id/txtDrop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drop Location"
             android:layout_marginTop="100dp"
+            android:text="Drop Location"
             android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/dropLocation"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="10dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="130dp"
             android:background="@drawable/custom_edittetext"
             android:hint="Drop location.."
-            android:layout_marginTop="130dp"/>
+            android:padding="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/btnDrop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
             android:layout_marginStart="150dp"
-            android:text="Next"/>
-
+            android:layout_marginTop="180dp"
+            android:text="Next" />
 
 
     </androidx.cardview.widget.CardView>
