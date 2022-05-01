@@ -5,9 +5,15 @@
       <map>
         <entry key="..\:/Ridder/app/src/main/res/drawable/custom_edittetext.xml" value="0.18" />
         <entry key="..\:/Ridder/app/src/main/res/layout/activity_pick_up.xml" value="0.25416666666666665" />
-        <entry key="..\:/Ridder/app/src/main/res/layout/activity_rider_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Ridder/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Ridder/app/src/main/res/layout/splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/drawable/custom_edittetext.xml" value="0.18" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/activity_pick_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/activity_rider_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/activity_verification.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XlauncherX/AndroidStudioProjects/Ridder/app/src/main/res/layout/splash_screen.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
