@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -23,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnContinue;
+    ProgressBar progressBar1;
     TextInputLayout layout;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
@@ -32,6 +35,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         mAuth = FirebaseAuth.getInstance();
+        progressBar1 = findViewById(R.id.progressBar1);
+
 
         btnContinue = findViewById(R.id.btnContinue);
         layout = findViewById(R.id.etxt_password);
@@ -42,7 +47,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
-        otpSend();
+        if (layout.getEditText().getText().length() == 10){
+            btnContinue.setVisibility(View.INVISIBLE);
+            progressBar1.setVisibility(View.VISIBLE);
+            otpSend();
+        }else{
+            Toast.makeText(this, "Invalid Phone no.", Toast.LENGTH_SHORT).show();
+        }
+
+
 
     }
 
@@ -60,7 +73,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onVerificationFailed(FirebaseException e) {
+                btnContinue.setVisibility(View.VISIBLE);
+                progressBar1.setVisibility(View.GONE);
                 Toast.makeText(SignUpActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("kkkkkk",e.getLocalizedMessage());
 
             }
 

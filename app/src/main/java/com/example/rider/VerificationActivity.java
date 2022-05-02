@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class VerificationActivity extends AppCompatActivity {
     TextView show_no;
     private String verificationId;
     Button btn_submit;
+    ProgressBar progressBar2;
     EditText etxt_verification;
 
     @Override
@@ -32,6 +34,7 @@ public class VerificationActivity extends AppCompatActivity {
         btn_submit = findViewById(R.id.btn_submit);
         etxt_verification = findViewById(R.id.etxt_verification);
         show_no = findViewById(R.id.show_no);
+        progressBar2 = findViewById(R.id.progressBar2);
 
         show_no.setText(String.format(
                 "+91-%s",getIntent().getStringExtra("phone")
@@ -43,6 +46,8 @@ public class VerificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (verificationId !=null){
+                    btn_submit.setVisibility(View.INVISIBLE);
+                    progressBar2.setVisibility(View.VISIBLE);
                     String code = etxt_verification.getText().toString();
 
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
@@ -55,6 +60,8 @@ public class VerificationActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }else {
                                 Toast.makeText(VerificationActivity.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
+                                btn_submit.setVisibility(View.VISIBLE);
+                                progressBar2.setVisibility(View.GONE);
                             }
                         }
                     });
